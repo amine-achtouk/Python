@@ -58,6 +58,7 @@ def add_book(library):
     library.append(new_book)
     print("✅ Book added successfully!")
     print(f"Title : {new_book['title']} || Author : {new_book['author']} || Price : {new_book['price']} || quantity : {new_book['quantity']} || genre : {new_book['genre']} || year : {new_book['year']}")
+
     
 
 
@@ -78,7 +79,7 @@ while True:
         show_books(library)
     elif choice == "2":
         available_books(library)
-    elif choice == "3":
+    elif choice == "3": 
         search_book(library)
     elif choice == "4":
         borrow_book(library)

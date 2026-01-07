@@ -1,77 +1,51 @@
-# person = {
-#     "name": "Ali",
-#     "age": 25,
-#     "grade": "18"
-# }
+person = {
+    "name": "Ali",
+    "age": 25,
+    "grade": "18"
+}
 
-# person['city'] = 'agadir'
+person['city'] = 'agadir'
 
-# person["grade"] = 19
+person["grade"] = 19
 
-# del person["age"]
+del person["age"]
 
-# for key, value in person.items():
-#     print(f'{key} : {value}')
-
-library = [
-    {"title": "Python Basics", "author": "John Smith", "price": 120, "quantity": 3},
-    {"title": "Learn Java", "author": "Sarah Lee", "price": 90, "quantity": 0},
-    {"title": "Web Development", "author": "Mark Davis", "price": 150, "quantity": 5},
-]
-
-total_value = 0
-
-def show_books(library):
-    for book in library:
-        title = book["title"]
-        author = book["author"]
-        price = book["price"]
-        quantity = book["quantity"]
-        print(f"📘 Book: {title} | Author: {author} | Price: {price} | Quantity: {quantity}")
+for key, value in person.items():
+    print(f'{key} : {value}')
 
 
+n = int(input("Donner la taille du tableau : "))
 
+T1 = []
+T2 = [2,5,6,4]
 
-def available_books(library):
-    for book in library:
-        title = book["title"]
-        quantity = book["quantity"]
-        if quantity > 0:
-            print(f'this book ({title}) is available')
+for i in range(n):
+    x = int(input(f"T1[{i}] = "))
+    T1.append(x)
 
-total_value = 0
+# Copie
+for i in range(n):
+    T2.append(T1[i])
 
-def calcu_total(library):
-    for book in library:
-        title = book["title"]
-        price = book["price"]
-        quantity = book["quantity"]
-        total_value = quantity * price
-        if quantity > 0:
-            print(f'total value for this book {title} is {total_value}$')
+print("Tableau T2 :", T2)
 
 
 
-def add_book(library, title, author, price, quantity):
-    new_book = {
-        "title": title,
-        "author": author,
-        "price": price,
-        "quantity": quantity
-    }
-    library.append(new_book)
-    print(f"✅ Book '{title}' added successfully!")
+n = int(input("Donner la taille : "))
 
+T1 = []
+T2 = []
+T = []
 
+print("Remplir T1 :")
+for i in range(n):
+    T1.append(int(input()))
 
+print("Remplir T2 :")
+for i in range(n):
+    T2.append(int(input()))
 
+for i in range(n):
+    T.append(T1[i] + T2[i])
 
-
-
-available_books(library)
-print('--------------------------')
-show_books(library)
-print('--------------------------')
-calcu_total(library)
-print('--------------------------')
-add_book(library, "C Programming", "Dennis Ritchie", 100, 7)
+print("Résultat T :", T)
